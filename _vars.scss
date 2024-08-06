@@ -1,0 +1,67 @@
+$widthtotal:1920px;
+$widthS1:1200px;
+$heightS1:75px;
+$widthS2:1201px;
+$heightS2:758px;
+$widthS3:1200px;
+$heightS3:none;
+$widthS4:1200px;
+$heightS4:none;
+$widthS5:$widthtotal;
+$heightS5:457px;
+$widthS6:1200px;
+$heightS6:460px;
+$widthfooter:$widthtotal;
+$heightfooter:437px;
+$widthfootercnt:1200px;
+$heightfootercnt:360px;
+
+
+$colortotal:#FFF;
+$colorS2:$colortotal;
+$colorS3:#292F36;
+$colorS5:#F4F0EC;
+$colorS5title:#CDA274;
+$colorS5subtitle:#4D5053;
+$colorfooter:$colortotal;
+
+//News
+$widthS21:$widthtotal;
+$heightS21:452px;
+$widthS22:503px;
+$heightS22:274px;
+
+
+//Blog
+$widthS31:$widthtotal;
+$heightS31:452px;
+$widthS32:1201px;
+$heightS32:2413px;
+$widthS32left:800px;
+$widthS32right:345px;
+
+
+@mixin ParamWHM($w, $h, $ml, $mr, $mt, $mb) {
+    width: $w;
+    height: $h;
+    margin-left: $ml;
+    margin-right: $mr;
+    margin-top: $mt;
+    margin-bottom: $mb;
+}
+
+@mixin ParamText($c, $ff, $fs, $fw, $p, $ta) {
+    color: $c;
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    position: $p;
+    text-align: $ta;
+}
+
+@mixin ParamPosition($p, $d, $jc, $ai) {
+    position: $p;
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+}

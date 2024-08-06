@@ -1,0 +1,527 @@
+        @import 'vars';
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        // .dm-serif-display-regular {
+        //     font-family: "DM Serif Display", serif;
+        //     font-weight: 400;
+        //     font-style: normal;
+        //   }
+          
+        //   .dm-serif-display-regular-italic {
+        //     font-family: "DM Serif Display", serif;
+        //     font-weight: 400;
+        //     font-style: italic;
+        //   }
+          
+        
+        a {
+            text-decoration: none;
+        }
+        
+        summary {
+            display: block;
+        }
+        
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .imgtopleft{border-top-left-radius: 20%;}
+        .imgtopright{border-top-right-radius: 20%;}
+        .imgbottomleft{border-bottom-left-radius: 20%;}
+        .imgbottomright{border-bottom-right-radius: 20%;}
+        .body {
+            font-family: 'Jost', 'DM Serif Display',sans-serif;
+        }
+        
+        .center {
+            padding-left: calc(35% - 570px);
+            padding-right: calc(35% - 570px);
+        }
+        
+        .header {
+            @include ParamWHM($widthS1, $heightS1, 360px, none, 69px, 69px);
+            min-height: 75px;
+            background: #fff;
+            @include ParamPosition(none, flex, space-between, center);
+            flex-direction: row;
+            flex-wrap: wrap;
+            &__left {
+                display: flex;
+                align-items: center;
+                gap: 41px;
+                &__img {
+                    height: 50px;
+                }
+            }
+            &__right {
+                display: flex;
+                gap: 33px;
+                &__link {
+                    @include ParamText(#292F36, Jost, 20px, 300, none, none);
+                }
+            }
+        }
+        
+        .s2container {
+            background-color: $colorS2;
+            @include ParamWHM($widthS2, $heightS2, 360px, none, none, none);
+           
+        }
+        
+        .s3container {
+            @include ParamWHM($widthS3, $heightS3, 360px, none, 100px, none);
+            @include ParamPosition(none, flex, center, none);
+            &__text {
+                &__title {
+                    @include ParamText($colorS3, 'DM Serif Display', 50px, 400, none, center);
+                }
+                &__subtitle {
+                    @include ParamText($colorS3, Jost, 22px, 300, none, center);
+                    margin-top: 3.3px;
+                }
+            }
+        }
+        
+        .s4container {
+            @include ParamWHM($widthS4, $heightS4, 360px, none, 30px, none);
+            display: grid;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            grid-template-columns: repeat(2, 549px);
+            grid-auto-flow: dense;
+            &__link {
+                &__img{}
+                &__subimg{ 
+                    @include ParamWHM(549px, 70px, none, none, 24px, 50px);
+                    @include ParamPosition(none, flex, space-between, none);
+                &__text {
+                    @include ParamText(#292F36, Jost, 22px, 400, none, center);
+                &__title{ 
+                @include ParamText(#292F36, Jost, 25px, 400, none, center);
+                }}
+                &__btn{
+                    width: 70px; 
+                    height: 70px; 
+                    background-color: #F4F0EC; 
+                    border-radius: 50%; 
+                    border: none; 
+                }
+            }}
+        }
+
+        .s5container{
+            @include ParamWHM($widthS5, $heightS5, none, none, 135px, none);
+            background-color: $colorS5;
+           @include ParamPosition(none, flex, center, center);
+          
+            &__block{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 76px;
+                &__text {
+                    
+                @include ParamWHM(246px,155px, none, none, none, none);
+                @include ParamPosition(none, flex, center, center);
+                flex-direction:column;
+                
+                     &__title {
+                    @include ParamText($colorS5title, Jost, 85px, 400, center, none);
+                    }
+                    &__subtitle{ @include ParamText($colorS5subtitle, Jost, 20px, 400, center, none);
+                    }
+                }
+            }
+        }
+        .s6container {
+            @include ParamWHM($widthS6, $heightS6, 360px, none, 1030px, none);
+            &__text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+                gap: 12px;
+                
+                &__up{
+                    width: 362px;
+                    text-align: center;
+                    &__title {
+                        @include ParamText(#222, Jost, 50px, 400, none, center);   
+                    } 
+                }
+               &__down{ 
+                width: 811px;
+                text-align: center;
+                margin-bottom:30px;
+                &__subtext {
+                @include ParamText(#222, Jost, 22px, 400, none, center);
+               
+            }}
+          }
+            &__btn{
+            display: grid;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-template-columns: repeat(3, 382px);
+            grid-auto-flow: dense;
+            gap: 16px;
+            &__link {
+                &__text {
+                   @include ParamText(#292F36, Jost, 25px, 400, none, none);
+                }
+                &__subimg{
+                    @include ParamWHM(350px, 70px, none, none, 24px, 50px);
+                    @include ParamPosition(none, flex, space-between, none);
+                    &__text {
+                @include ParamText(#292F36, Jost, 16px, 400, none, center);
+                }
+                    &__btn{
+                    width: 52px; 
+                    height: 52px; 
+                    background-color: #F4F0EC; 
+                    border-radius: 50%; 
+                    border: none; 
+                }
+            }
+            }}
+        }
+        .footer{
+            @include ParamWHM($widthfooter, $heightfooter, none, none, 250px, none);
+            background-color: $colorfooter;
+            display:block;
+            position: absolute;
+            &__cnt{
+                @include ParamWHM($widthfootercnt, $heightfootercnt, 370px, none, 60px, none);
+                background-color:#FFF;
+                position: relative;
+                justify-content:space-between;
+                display: grid;
+            flex-wrap: wrap;
+            grid-template-columns: repeat(3, 320px);
+            grid-auto-flow: dense;
+            &__link {
+                &__text {
+                    @include ParamText(#222, Jost, 13px, 400, none, center);
+                    margin-top: 24px;
+                    margin-bottom: 25px;
+                }
+            }
+        }}
+        
+        //Страница News
+
+        .s21container{
+            @include ParamWHM($widthS21, $heightS21, none, none, none, none);
+
+        }
+        .s22container{
+            @include ParamWHM($widthtotal, $heightS22, none, none, -280px, none);
+            @include ParamPosition(none, flex, center, none);
+            &__text{
+                @include ParamWHM($widthS22, $heightS22, none, none, none, none);
+                @include ParamPosition(none, flex, none, none);
+                background-color:$colortotal;
+                border-top-left-radius: 10%;
+                border-top-right-radius: 10%;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+                gap: 12px;
+                &__up{
+                    margin-top: 30px;
+                    width: 362px;
+                    text-align: center;
+                    &__title {
+                        @include ParamText(#222, Jost, 50px, 400, none, center);   
+                    } 
+                }
+                 &__down{ 
+                    width: 811px;
+                    text-align: center;
+                    margin-bottom:30px;
+                    &__subtext {
+                        @include ParamText(#222, Jost, 22px, 400, none, center);   
+                    }
+                }
+          }
+         
+        }
+.s23container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 27px;
+
+    position: absolute;
+    width: 1201px;
+    height: 674px;
+    left: 360px;
+    top: 750px;
+        &__title{
+                @include ParamText(#222, Jost, 50px, 400, none, center);    
+                width: 426px;
+                height: 65px;
+                
+                font-family: serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 52.3722px;
+                line-height: 125%;
+                /* or 65px */
+                letter-spacing: 0.02em;
+                
+                color: #292F36;
+            }
+        &__content{
+            gap: 27px;
+            width: 1201px;
+            height: 611px;
+            display: flex;
+            flex-direction: column;
+                &__img{width: 596px;
+                    height: 500.68px;}
+                &__text{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 27px;
+                    position: absolute;
+                    width: 512px;
+                    height: 670px;
+                    margin-left: 660px;
+                    &__title{
+                        margin-bottom: 20px;
+                        width: 484.97px;
+                        height: 66px;
+                        
+                        font-family: 'DM Serif Display';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 26.1861px;
+                        line-height: 125%;
+                        /* or 33px */
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.02em;
+                        
+                        color: #292F36;
+                        
+                    }
+                    &__subtitle{width: 491.25px;
+                        height: 379.17px;
+                        
+                        font-family: 'Jost';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 23.0438px;
+                        line-height: 150%;
+                        /* or 35px */
+                        letter-spacing: 0.01em;
+                        
+                        color: #4D5053;
+                        
+                        
+                        /* Inside auto layout */
+                        flex: none;
+                        order: 1;
+                        flex-grow: 0;
+                    }
+                    &__subimg{
+                        @include ParamWHM(512px, 70px, none, none, 24px, 50px);
+                        @include ParamPosition(none, flex, space-between, none);
+                        &__text {
+                            @include ParamText(#292F36, Jost, 16px, 400, none, center);
+                        }
+                        &__btn{
+                            width: 52px; 
+                            height: 52px; 
+                            background-color: #F4F0EC; 
+                            border-radius: 50%; 
+                            border: none; 
+                        }
+                    }    
+                }
+
+
+            }
+        }
+
+
+ //Страница Blog
+ .s31container{
+    @include ParamWHM($widthS31, $heightS31, none, none, none, none);
+
+    }
+    
+
+.s32container{
+    @include ParamWHM($widthS32, $heightS32, 360px, none, none, none);
+    
+    &__content{
+        display: flex;
+        flex-direction: row;
+        gap:52px;
+    
+        &__left{ 
+            @include ParamWHM(800px,$heightS32, none, none, none, none);
+            
+            &__bigtitle{
+                @include ParamText(#292F36, Jost, 50px, 400, none, none);   
+            }
+            &__underimg{
+                @include ParamText(#292F36, Jost, 16px, 400, none, none);
+            }
+            &__text{
+                @include ParamText(#292F36, Jost, 22px, 400, none, none);
+            }
+            &__title{
+                @include ParamText(#292F36, serif, 50px, 400, none, none);
+            }
+        }
+        
+        &__right{
+            @include ParamWHM(345px, $heightS32, none, none, none, none);
+            
+            &__tag{
+                width: 55px;
+                height: 31px;
+
+                font-family: serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 125%;
+                /* or 31px */
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.02em;
+                color: #292F36;
+
+            }
+            &__btn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 9px 30px;
+                gap: 10px;
+             
+                @include ParamWHM(335px,145px, none, none, none, 20px);
+                
+                &__style{
+                    width: hug;
+                    height: hug;
+                    background: #F4F0EC;
+                    border-radius: 10px;
+                    border: none; 
+                    justify-content: center;
+                    align-items: center;
+                    gap:10px;
+                    margin-bottom: 20px;
+                    
+                }
+                &__text{
+                    @include ParamText(#b6b9bd, Jost, 18px, 400, none, none);   
+                    padding: 9px 30px;
+                }
+            }
+            }
+        }
+    }
+    
+
+
+
+
+        // @media (min-width: 426px) and (max-width: 770px) {
+        //     .header {
+        //         @include ParamWHM(769px, $heightS1, none, none, none, none);
+        //     }
+        //     .s2container {
+        //         background-color: $colorS2;
+        //         @include ParamWHM(769px, 368px, 0px, none, none, none);
+        //         &__text {
+        //             @include ParamWHM(360px, 78px, none, 33px, 100px, none);
+        //             &__title {
+        //                 @include ParamText(#222, Lato, 44px, 900, none, none);
+        //             }
+        //             &__subtitle {
+        //                 @include ParamText(#222, Lato, 24px, 700, none, none);
+        //             }
+        //         }
+        //     }
+        //     .s3container {
+        //         @include ParamWHM(769px, $heightS3, none, none, 50px, 50px);
+        //     }
+        //     .s4container {
+        //         @include ParamWHM(739px, $heightS4, 15px, 15px, 0px, none);
+        //         display: grid;
+        //         flex-wrap: wrap;
+        //         justify-content: space-between;
+        //         grid-template-columns: repeat(2, 360px);
+        //         grid-auto-flow: dense;
+        //         &__link {
+        //             &__text {
+        //                 @include ParamText(#222, Lato, 13px, 400, none, center);
+        //                 margin-top: 24px;
+        //                 margin-bottom: 25px;
+        //             }
+        //         }
+        //     }
+        // }
+        
+        // @media screen and (max-width: 425px) {
+        //     .need-hide {
+        //         display: none;
+        //     }
+        //     .header {
+        //         width: 100vw;
+        //     }
+        //     .s2container {
+        //         @include ParamWHM(100vw, 363px, 0px, 0px, 0px, 0px);
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         &__text {
+        //             @include ParamWHM(none, 93px, none, 0px, 0px, none);
+        //             display: flex;
+        //             flex-direction: column;
+        //             justify-content: center;
+        //             &__title {
+        //                 @include ParamText(#222, Lato, 38px, 900, none, none);
+        //             }
+        //             &__subtitle {
+        //                 @include ParamText(#222, Lato, 20px, 700, none, none);
+        //             }
+        //         }
+        //     }
+        //     .s3container {
+        //         @include ParamWHM(100vw, $heightS3, none, none, 50px, 50px);
+        //     }
+        //     .s4container {
+        //         @include ParamWHM(100vw, $heightS4, 15px, 15px, 0px, none);
+        //         display: grid;
+        //         flex-wrap: wrap;
+        //         justify-content: space-between;
+        //         grid-template-columns: repeat(1, 100vw);
+        //         grid-auto-flow: dense;
+        //         &__link {
+        //             &__img {
+        //                 width: 100vw;
+        //             }
+        //             &__text {
+        //                 @include ParamText(#222, Lato, 13px, 400, none, center);
+        //                 margin-top: 24px;
+        //                 margin-bottom: 25px;
+        //             }
+        //         }
+        //     }
+        // }

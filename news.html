@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+</head>
+
+<body class="body">
+    <section1>
+        <header class="header center">
+            <div class="header__left">
+                <a href="index.html"><img class="header__left__img"src="img/s1/Logo.png" alt="logo"></a>
+            </div>
+            <nav class="header__right">
+                <a class="header__right__link" href="#">Домой</a>
+                <a class="header__right__link" href="#">Проект</a>
+                <a class="header__right__link" href="#">Блок</a>
+            </nav>
+        </header>
+    </section1>
+    <section21>
+        <div class="s21container">
+            <img src="img/s21/Images.png">
+        </div>
+    </section21>
+    <section22>
+        <div class="s22container">
+            <div class="s22container__text">
+                <div class="s22container__text__up">
+                <span class="s22container__text__up__title">Статьи & Новости</span></div>
+                <div class="s22container__text__down"><span class="s22container__text__subtitle">Домой /  <br> Блог
+                </span></div>
+            </div>
+        </div>
+    </section22>
+    <section23>
+        <div id="app" class="s23container">
+            <span class="s23container__title"> Последний пост</span>
+        
+            <div class="s23container__content">
+                <!--<img src="img/s23/Image.png" class="s23container__content__img"> -->
+                <img :src="currentItem.image" alt="Item Image" class="s23container__content__img">
+            
+                <div class="s23container__content__text">
+                    <div>
+                <span class="s23container__content__text__title">{{ currentItem.title }}</span>
+                <span class="s23container__content__text__subtitle">{{ currentItem.description }}
+                </span></div>
+                <div class="s23container__content__text__subimg">
+                    <div> 
+                    <span class="s23container__content__text__subimg__text"> {{ currentItem.date }}</span>
+                    </div>
+                    <button class="s23container__content__text__subimg__btn" @click="nextItem"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                </div>
+                
+                </div></div>
+        </div>
+        </div>
+    </section23>
+
+    <section6> 
+         <div class="s6container">
+            <div class="s6container__text">
+                <div class="s6container__text__up">
+                <span class="s6container__text__up__title">Статьи & Новости</span></div>
+                <div class="s6container__text__down"><span class="s6container__text__subtitle">Хорошо известно, что читатель будет отвлекаться <br> на читабельный контент
+                </span></div>
+            </div>
+            <div class="s6container__btn">
+                <a href="#" class="s6container__btn__link">
+                <img class="s6container__btn__link__img" src="img/s6/Image1.png" alt="">
+                <span class="s6container__btn__link__text">
+                    Создадим лучший макет перепланировки
+                </span>
+                <div class="s6container__btn__link__subimg">
+                    <div> 
+                    <span class="s6container__btn__link__subimg__text"> 26 Декабрь,2022 </span>
+                    </div>
+                    <button class="s6container__btn__link__subimg__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                </div>
+            </a>
+            <a href="#" class="s6container__btn__link">
+                <img class="s6container__btn__link__img" src="img/s6/Image2.png" alt="">
+                <span class="s6container__btn__link__text">
+                    Лучшие интерьерные идеи по низкой цене
+                </span>
+                <div class="s6container__btn__link__subimg">
+                    <div> 
+                    <span class="s6container__btn__link__subimg__text"> 26 Декабрь,2022 </span>
+                    </div>
+                    <button class="s6container__btn__link__subimg__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                </div>
+            </a>
+            <a href="#" class="s6container__btn__link">
+                <img class="s6container__btn__link__img" src="img/s6/Image3.png" alt="">
+                <span class="s6container__btn__link__text">
+                    Лучшие интерьерные решения для офисов 
+                </span>
+                <div class="s6container__btn__link__subimg">
+                    <div> 
+                    <span class="s6container__btn__link__subimg__text"> 26 Декабрь,2022 </span>
+                    </div>
+                    <button class="s6container__btn__link__subimg__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                </div>
+            </a></div>      
+        </div> 
+    </section6> 
+    <footer>
+        <div class="footer">
+            <div class="footer__cnt">
+            <a href="#" class="footer__cnt__link">
+                <img class="footer__cnt__link__img" src="" alt="">
+                Логотип
+            </a>
+            <div class="footer__cnt__link">Страницы</div>
+            <div class="footer__cnt__link">Контакты</div>
+            
+             </div>
+             
+             
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  
+   </body></html>
